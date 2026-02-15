@@ -6,13 +6,13 @@
 /*   By: sayeghia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 23:00:40 by sayeghia          #+#    #+#             */
-/*   Updated: 2026/01/30 23:39:14 by sayeghia         ###   ########.fr       */
+/*   Updated: 2026/02/15 23:02:16 by sayeghia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-        if (c >= 65 && c <= 90)
-                return (c + 32);
-        return (c);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }

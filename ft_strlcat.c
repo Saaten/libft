@@ -6,9 +6,10 @@
 /*   By: sayeghia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:31:46 by sayeghia          #+#    #+#             */
-/*   Updated: 2026/01/31 15:56:10 by sayeghia         ###   ########.fr       */
+/*   Updated: 2026/02/15 22:37:23 by sayeghia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 size_t	strlcat(char *dst, const char *src, size_t size)
 {

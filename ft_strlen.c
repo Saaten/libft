@@ -6,9 +6,10 @@
 /*   By: sayeghia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 22:21:52 by sayeghia          #+#    #+#             */
-/*   Updated: 2026/01/30 22:30:53 by sayeghia         ###   ########.fr       */
+/*   Updated: 2026/02/15 22:07:40 by sayeghia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

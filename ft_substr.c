@@ -6,9 +6,10 @@
 /*   By: sayeghia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 22:00:36 by sayeghia          #+#    #+#             */
-/*   Updated: 2026/02/07 22:23:39 by sayeghia         ###   ########.fr       */
+/*   Updated: 2026/02/15 22:57:52 by sayeghia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

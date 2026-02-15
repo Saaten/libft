@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sayeghia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 22:17:10 by sayeghia          #+#    #+#             */
-/*   Updated: 2026/02/15 22:54:29 by sayeghia         ###   ########.fr       */
+/*   Created: 2026/02/15 19:57:25 by sayeghia          #+#    #+#             */
+/*   Updated: 2026/02/15 20:12:49 by sayeghia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned char	*s11;
-	unsigned char	*s22;
+	t_list	*node;
+	t_list	*lst2;
 
-	s11 = (unsigned char *)s1;
-	s22 = (unsigned char *)s2;
-	while (n > 0)
+	if (!lst || !f || !del)
+		return (NULL);
+	node = ft_lstnew(f(lst ->content));
+	if (!node)
+		return (NULL);
+	lst2 = node;
+	lst = lst->next;
+	while (lst)
 	{
-		if (*s11 != *s22)
-			return (*s11 - *s22);
-		n--;
-		s11++;
-		s22++;
+		node = ft_lstnew(f(lst ->content));
+		if (!node)
+		{
+			ft_lstclear(&lst2, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&lst2, node);
+		lst = lst -> next;
 	}
-	return (0);
+	return (lst2);
 }

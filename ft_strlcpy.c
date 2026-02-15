@@ -6,11 +6,11 @@
 /*   By: sayeghia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 15:31:29 by sayeghia          #+#    #+#             */
-/*   Updated: 2026/02/01 15:58:09 by sayeghia         ###   ########.fr       */
+/*   Updated: 2026/02/15 22:36:24 by sayeghia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

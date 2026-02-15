@@ -6,9 +6,10 @@
 /*   By: sayeghia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 19:15:11 by sayeghia          #+#    #+#             */
-/*   Updated: 2026/02/01 19:19:48 by sayeghia         ###   ########.fr       */
+/*   Updated: 2026/02/15 22:38:52 by sayeghia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 char	*strchr(const char *s, int c)
 {
