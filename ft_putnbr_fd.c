@@ -6,17 +6,28 @@
 /*   By: sayeghia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 20:58:22 by sayeghia          #+#    #+#             */
-/*   Updated: 2026/02/14 21:23:12 by sayeghia         ###   ########.fr       */
+/*   Updated: 2026/02/22 22:33:23 by sayeghia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int nb, int fd)
 {
-	char	*s;
+	int	c;
 
-	s = ft_itoa(n);
-	ft_putstr_fd(s, fd);
-	free (s);
+	if (nb == -2147483648)
+		write(fd, "-2147483648", 11);
+	else
+	{
+		if (nb < 0)
+		{
+			write(fd, "-", 1);
+			nb = -nb;
+		}
+		if (nb > 9)
+			ft_putnbr_fd(nb / 10, fd);
+		c = nb % 10 + '0';
+		write(fd, &c, 1);
+	}
 }

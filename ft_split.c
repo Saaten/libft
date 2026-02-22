@@ -6,7 +6,7 @@
 /*   By: sayeghia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 20:59:43 by sayeghia          #+#    #+#             */
-/*   Updated: 2026/02/11 21:04:38 by sayeghia         ###   ########.fr       */
+/*   Updated: 2026/02/22 21:46:50 by sayeghia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -28,7 +28,7 @@ size_t	counter(char const *s, char c)
 	return (count);
 }
 
-size_t	lenn(char const *s, char c)
+size_t	llenn(char const *s, char c)
 {
 	size_t	len;
 
@@ -48,7 +48,7 @@ void	fill(char **res, char const *s, char c, int *i)
 			s++;
 		if (*s)
 		{
-			len = lenn(s, c);
+			len = llenn(s, c);
 			res[*i] = ft_substr(s, 0, len);
 			if (!res[*i])
 			{
@@ -69,7 +69,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	size_t	word;
-	int	i;
+	int		i;
 
 	if (!s)
 		return (NULL);

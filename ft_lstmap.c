@@ -6,7 +6,7 @@
 /*   By: sayeghia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/15 19:57:25 by sayeghia          #+#    #+#             */
-/*   Updated: 2026/02/15 20:12:49 by sayeghia         ###   ########.fr       */
+/*   Updated: 2026/02/22 22:51:55 by sayeghia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -15,6 +15,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*node;
 	t_list	*lst2;
+	void	*con;
 
 	if (!lst || !f || !del)
 		return (NULL);
@@ -25,9 +26,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	lst = lst->next;
 	while (lst)
 	{
-		node = ft_lstnew(f(lst ->content));
+		con = f(lst ->content); 
+		node = ft_lstnew(con);
 		if (!node)
 		{
+			del(con);
 			ft_lstclear(&lst2, del);
 			return (NULL);
 		}
